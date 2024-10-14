@@ -2,7 +2,7 @@ const url = 'https://api.openweathermap.org/data/2.5/weather' ;
 const apiKey = '13c4bf8c9a2e4edad2c63dd362f4ade4' ;
 
 window.onload = function() {
-    weatherFn("Pune") ;
+    weatherFn("Pune"); 
 }
 
 async function weatherFn() {
