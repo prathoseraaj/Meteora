@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    font-style: italic;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    color: white;
+
+
+}
+
+.container{
+    text-align: center;
+    padding: 50px;
+    background-color: rgb(11, 11, 14);
+    border-radius: 20px;
+
+} 
+
+#city-input{
+    border-radius: 2px;
+    
+}
+
+
