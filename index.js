@@ -28,6 +28,24 @@ async function weatherFn(city = null) {
         console.error('Error Fetching Weather Data : ', error) ;
     }
 
+    //adding forcast
+
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cName}&appid=${apiKey}&units=metric`;
+    try{
+
+        const forcastresp = await fetch(forecastUrl) ;
+        forcastdata = await forcastresp.json();
+        console.log(forcastdata);
+        return forcastdata ;
+
+    }
+
+    catch(error){
+        console.error('Error Fetching Weather Data : ', error) ;
+
+    }
+
+
 }
 
 
