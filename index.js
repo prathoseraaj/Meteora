@@ -36,13 +36,30 @@ async function weatherFn(city = null) {
         const forcastresp = await fetch(forecastUrl) ;
         forcastdata = await forcastresp.json();
         console.log(forcastdata);
-        return forcastdata ;
+        exactdailyforcast(forcastdata);
+
 
     }
 
     catch(error){
         console.error('Error Fetching Weather Data : ', error) ;
 
+    }
+
+    function exactdailyforcast(forcastdata){
+        const dailyforcast = [] ;
+
+        for(let i of forcastdata.list){
+            const forcast = i ;
+
+            forcasttime = forcast.dt_txt ;
+
+            //checking as the time is equal to 12.00 pm
+            if(forcasttime.includes("12:00:00")){
+                dailyforcast.push(forcast);
+            }
+        }
+        console.log(dailyforcast);
     }
 
 
