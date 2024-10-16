@@ -5,9 +5,10 @@ window.onload = function() {
     weatherFn("Pune"); 
 }
 
-async function weatherFn() {
+async function weatherFn(city = null) {
 
-    const cName = document.getElementById('city-input').value;
+    const cName = city || document.getElementById('city-input').value;
+
 
     const temp = `${url}?q=${cName}&appid=${apiKey}&units=metric`;
     try {
