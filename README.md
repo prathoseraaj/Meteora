@@ -10,9 +10,6 @@
 - **Responsive design**: The website is optimized for both desktop and mobile devices.
 - **API integration**: Real-time data fetched using external weather APIs.
 
-## Demo
-
-[Include a link to your live website here if hosted]
 
 ## Technologies Used
 
@@ -21,7 +18,6 @@
 - **JavaScript (ES6+)**
 - **Weather API**: Integrated with a weather API for real-time data
 - **Git**: Version control
-- **GitHub Pages/Netlify/Heroku**: For deployment (if applicable)
 
 ## Installation
 
