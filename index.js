@@ -16,7 +16,11 @@ async function weatherFn(city = null) {
         const data = await response.json() ; 
         if(response.ok) {
             console.log(data);
-            weatherShowfn(data);
+
+            //Here we calls exactdailyforcast to make sure as the code fetch api properly
+            const dailyforcast = await exactdailyforcast(cName) ;
+            weatherShowfn(data,dailyforcast);
+
         }
         else{
             alert('city not Found. Please try again') ;
@@ -27,8 +31,12 @@ async function weatherFn(city = null) {
     catch(error){
         console.error('Error Fetching Weather Data : ', error) ;
     }
+}
 
     //adding forcast
+
+async function exactdailyforcast(cName) {
+    
 
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cName}&appid=${apiKey}&units=metric`;
     try{
@@ -36,9 +44,6 @@ async function weatherFn(city = null) {
         const forcastresp = await fetch(forecastUrl) ;
         forcastdata = await forcastresp.json();
         console.log(forcastdata);
-        exactdailyforcast(forcastdata);
-
-
     }
 
     catch(error){
@@ -46,7 +51,6 @@ async function weatherFn(city = null) {
 
     }
 
-    function exactdailyforcast(forcastdata){
         const dailyforcast = [] ;
 
         for(let i of forcastdata.list){
@@ -60,16 +64,14 @@ async function weatherFn(city = null) {
             }
         }
         console.log(dailyforcast);
-    }
+        return dailyforcast ;
+
 
 
 }
 
 
-
-
-
-function weatherShowfn(data) {
+function weatherShowfn(data,dailyforcast) {
 
     document.getElementById('city-name').textContent = data.name ;
 
@@ -84,5 +86,7 @@ function weatherShowfn(data) {
     document.getElementById('weather-icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
     document.getElementById('weatherINFO').style.display = 'block';
+
+    document.getElementById("day1").innerHTML = `${dailyforcast[0].main.temp}`;
 
 }
