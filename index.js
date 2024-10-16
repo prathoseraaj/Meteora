@@ -89,4 +89,10 @@ function weatherShowfn(data,dailyforcast) {
 
     document.getElementById("day1").innerHTML = `${dailyforcast[0].main.temp}`;
 
+    document.getElementById("day2").innerHTML = `${dailyforcast[1].main.temp}`;
+
+    document.getElementById("day3").innerHTML = `${dailyforcast[2].main.temp}` ;
+
+    document.getElementById("day4").innerHTML = `${dailyforcast[3].main.temp}` ;
+
 }
