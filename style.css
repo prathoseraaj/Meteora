@@ -29,4 +29,16 @@ body{
     border-radius: 2px;
 }
 
+.daycontainer{
+    display: flex; 
+    align-items: flex-start;
+    justify-content: space-around; /* Distributes space between items evenly */
+
+}
+
+.days{
+    background-color:rgb(20, 20, 20) ;
+    width: 100px;
+
+}
 
