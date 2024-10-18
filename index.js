@@ -77,9 +77,9 @@ function weatherShowfn(data,dailyforcast) {
 
     document.getElementById('date').textContent = moment().format('MMMM Do YYYY , h:mm:ss a') ;
 
-    document.getElementById('temperature').innerHTML = `${data.main.temp} C` ;
+    document.getElementById('temperature').innerHTML = `<i class='bx bx-wind' style='color:#05fffb'  ></i> ${data.main.temp} C` ;
    
-    document.getElementById('description').textContent = data.weather[0].description;
+    document.getElementById('description').innerHTML =`<i class='bx bx-cloud-light-rain' style='color:#05fffb' ></i>  ${data.weather[0].description}`;
 
     document.getElementById('wind-speed').innerHTML = `Wind Speed: ${data.wind.speed}` ; 
 
