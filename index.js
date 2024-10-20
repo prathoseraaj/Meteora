@@ -62,6 +62,7 @@ async function exactdailyforcast(cName) {
             if(forcasttime.includes("12:00:00")){
                 dailyforcast.push(forcast);
             }
+            
         }
         console.log(dailyforcast);
         return dailyforcast ;
@@ -77,13 +78,14 @@ function weatherShowfn(data,dailyforcast) {
 
     document.getElementById('date').textContent = moment().format('MMMM Do YYYY , h:mm:ss a') ;
 
-    document.getElementById('temperature').innerHTML = `<i class='bx bx-wind' style='color:#05fffb'  ></i> ${data.main.temp} C` ;
+    document.getElementById('temperature').innerHTML = ` ${Math.floor(data.main.temp)}° ` ;
    
-    document.getElementById('description').innerHTML =`<i class='bx bx-cloud-light-rain' style='color:#05fffb' ></i>  ${data.weather[0].description}`;
+    document.getElementById('description').innerHTML =` ${data.weather[0].description}`;
 
-    document.getElementById('wind-speed').innerHTML = `Wind Speed: ${data.wind.speed}` ; 
+    document.getElementById('wind-speed').innerHTML = `<i class='bx bx-wind' style='color:#05fffb' ></i> Wind Speed: ${data.wind.speed}` ; 
 
-    document.getElementById('weather-icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    document.getElementById('weather-icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png `;
+
 
     document.getElementById('weatherINFO').style.display = 'block';
 
