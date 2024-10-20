@@ -19,9 +19,6 @@ body{
     padding: 50px;
     background-color:rgb(46, 46, 46);
     border-radius: 10px;
-    
-
-
 
 } 
 
@@ -42,3 +39,33 @@ body{
 
 }
 
+#temp{
+    font-size: 5em;
+}
+
+
+
+.tempcontainer{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    margin-top: -70px;
+    margin-bottom: -70px;
+
+
+}
+
+#icon{
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+
+}
+
+#description {
+    font-size: 1.2em;
+    margin-top: -20px;
+    font-style: italic;
+    color: rgb(187, 185, 185); /* Lighter shade for visibility */
+    text-align: center;
+}
