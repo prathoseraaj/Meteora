@@ -76,8 +76,7 @@ function weatherShowfn(data,dailyforcast) {
 
     document.getElementById('city-name').textContent = data.name ;
 
-    document.getElementById('date').textContent = moment().format('MMMM Do YYYY , h:mm:ss a') ;
-
+    document.getElementById('date').textContent = moment().format(' Do YYYY, dddd ') ;
     document.getElementById('temperature').innerHTML = ` ${Math.floor(data.main.temp)}° ` ;
    
     document.getElementById('description').innerHTML =` ${data.weather[0].description}`;
