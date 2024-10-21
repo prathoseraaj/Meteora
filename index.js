@@ -90,9 +90,9 @@ function weatherShowfn(data,dailyforcast) {
 
     document.getElementById("day1").innerHTML = `${moment(dailyforcast[0].dt_txt).format('dddd')}: ${Math.floor(dailyforcast[0].main.temp)}°`;
 
-    document.getElementById("day2").innerHTML = `${moment(dailyforcast[1].dt_txt).format('dddd')}: ${Math.floor(dailyforcast[0].main.temp)}°`;
+    document.getElementById("day2").innerHTML = `${moment(dailyforcast[1].dt_txt).format('dddd')}: ${Math.floor(dailyforcast[1].main.temp)}°`;
 
-    document.getElementById("day3").innerHTML = `${moment(dailyforcast[2].dt_txt).format('dddd')}: ${Math.floor(dailyforcast[0].main.temp)}°`;
+    document.getElementById("day3").innerHTML = `${moment(dailyforcast[2].dt_txt).format('dddd')}: ${Math.floor(dailyforcast[2].main.temp)}°`;
 
-    document.getElementById("day4").innerHTML = `${moment(dailyforcast[3].dt_txt).format('dddd')}: ${Math.floor(dailyforcast[0].main.temp)}°`;
+    document.getElementById("day4").innerHTML = `${moment(dailyforcast[3].dt_txt).format('dddd')}: ${Math.floor(dailyforcast[3].main.temp)}°`;
 }
