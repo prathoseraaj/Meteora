@@ -23,8 +23,22 @@ body{
 } 
 
 #city-input{
-    border-radius: 2px;
+    background-color: rgb(192, 192, 192);
+    border: 1px solid #000; /* Ensure there is a border */
+    padding: 5px;
+    border-radius: 10px;
+    
 }
+
+.button{
+    background-color:rgb(46, 46, 46) ;
+    color: white;
+    border: 0cap;
+    border-radius: 10px !important;
+    cursor: pointer;
+}
+
+
 
 .daycontainer{
     background-color:rgb(20, 20, 20) ;
