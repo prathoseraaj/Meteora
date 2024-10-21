@@ -74,7 +74,7 @@ async function exactdailyforcast(cName) {
 
 function weatherShowfn(data,dailyforcast) {
 
-    document.getElementById('city-name').textContent = data.name ;
+    document.getElementById('city-name').innerHTML =`<i class='bx bxs-plane-take-off'></i> ${data.name} `;
 
     document.getElementById('date').textContent = moment().format(' Do YYYY, dddd ') ;
     document.getElementById('temperature').innerHTML = ` ${Math.floor(data.main.temp)}° ` ;
